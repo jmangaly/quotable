@@ -6,28 +6,44 @@
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
+
 <body>
 	<header>
 		<div class="col-xs-3">
 			<div class="circle">
 				<br/>
 				<br/>
-				Q <br/>
+				Q  
+				<br/>
 			</div>	
 
 		</div>	
-		</div class="col-xs-4 slogan">	
+		<div class="col-xs-4 slogan">	
 			Famous Women. Real Quotes.
 		</div>
 		<div class="col-xs-5 links">	
-			 <%= link_to 'Contribute', '#' %>
-			 <%= link_to 'About', '#' %>
+			 <%= link_to 'CONTRIBUTE   ', '#' %>
+			 <%= link_to 'ABOUT', '#' %>
 		</div>	
 	</header>	
 	<hr />
 	<br class="clear" />
 
-<%= yield %>
+	<div class="container">
+		<%= yield %>
+	</div>
 
+	<div class="footer">
+		<div class="container">
+			<div class="col-xs-6">
+				<%= link_to "Need more wisdom and insight?", "#", :class => 'next-quote' %> 
+			</div>	
+			<div class="col-xs-6 footer-blurb">
+				Lovingly hand-coded in Dallas, Texas by <a href="http://www.jennifermangaly.com">Jen</a>.
+				<br/>
+				@ 2015 Jennifer Mangaly
+			</div>
+		</div>
+	</div>
 </body>
 </html>

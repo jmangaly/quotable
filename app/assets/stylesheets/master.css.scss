@@ -1,8 +1,15 @@
 @import url(https://fonts.googleapis.com/css?family=Playfair+Display);
+@import url(https://fonts.googleapis.com/css?family=Muli);
+
+body {
+	background-color: linen;
+}
 
 .clear {
 	clear: both;
 }
+
+
 
 .circle {
     font-weight:bold;
@@ -28,25 +35,56 @@
 
 
 .slogan {
-  	font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
-  		font-style: italic;
+  	font-family: 'Muli', Verdana, Helvetica, sans-serif;
+  		font-size: 22px;
   		padding-top: 26px;
+  		color:MediumVioletRed;
+  		text-align:left;
+  		
 }
 
 .links {
 	padding-top:26px;
+	font-family: 'Muli', Verdana, Helvetica, sans-serif;
+	font-size: 14px;
+	letter-spacing: 2px;
+	color:black;
 }
 
 .links a {
+	font-family: 'Muli', Verdana, Helvetica, sans-serif;
 	color:black;
-	font-size: 25px;
-	border-bottom: 1px solid #dfdfdf
+	font-size: 14px;
+	letter-spacing: 2px;
+	border-bottom: 1px solid plum;	
 }
 
 header {
-  border-top: 9px solid #222222;
+  border-top: 9px solid plum;  
 }
 
 hr {
 	clear:both;
 }
+
+h1 {
+   font-family: 'Playfair Display', serif;
+}   
+
+h2 {
+   font-family: 'Playfair Display', serif;
+}
+
+.next-quote {
+  color:MediumVioletRed;
+  font-family: 'Muli', Verdana, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+.footer-blurb {
+  	font-family: 'Muli', Verdana, Helvetica, sans-serif;
+  	font-size: 14px;
+  	text-align: right;
+}
+
+
