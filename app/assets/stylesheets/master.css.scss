@@ -2,7 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Muli);
 
 body {
-	background-color: linen;
+	background-color: white;
 }
 
 .clear {
@@ -24,7 +24,6 @@ body {
     text-align: center;
     color: white;
     font-size: 90px;
-    // font-style: italic;
     font-family: 'Playfair Display', serif;
     line-height: 17px;
     // cursor: pointer;
@@ -33,22 +32,21 @@ body {
     // -webkit-transform:rotate(11deg); /* Opera, Chrome, and Safari */
 }
 
-
 .slogan {
-  	font-family: 'Muli', Verdana, Helvetica, sans-serif;
+  	font-family: 'Playfair Display', serif;
   		font-size: 22px;
-  		padding-top: 26px;
+  		padding-top: 10px;
   		color:MediumVioletRed;
-  		text-align:left;
-  		
+  		text-align:left; 		
+      font-style: italize;
 }
 
 .links {
-	padding-top:26px;
+	// padding-top: 150px; 
 	font-family: 'Muli', Verdana, Helvetica, sans-serif;
 	font-size: 14px;
-	letter-spacing: 2px;
 	color:black;
+  text-align: right;
 }
 
 .links a {
@@ -56,7 +54,8 @@ body {
 	color:black;
 	font-size: 14px;
 	letter-spacing: 2px;
-	border-bottom: 1px solid plum;	
+	border-bottom: 1px solid plum;
+  text-align: right;	
 }
 
 header {
@@ -67,24 +66,35 @@ hr {
 	clear:both;
 }
 
+h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 90px;
+  color:purple;
+}
+
+
 h1 {
-   font-family: 'Playfair Display', serif;
-}   
+  font-family: 'Playfair Display', serif;
+}
 
 h2 {
-   font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif;
 }
 
 .next-quote {
   color:MediumVioletRed;
-  font-family: 'Muli', Verdana, Helvetica, sans-serif;
+  font-family: 'Playfair Display', serif;
   font-size: 20px;
 }
 
 .footer-blurb {
   	font-family: 'Muli', Verdana, Helvetica, sans-serif;
-  	font-size: 14px;
+  	font-size: 12px;
   	text-align: right;
 }
 
+.about, p {
+  font-family: 'Muli', Verdana, Helvetica, sans-serif;    
+      
+}
 
