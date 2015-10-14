@@ -9,7 +9,9 @@ body {
 	clear: both;
 }
 
-
+.logo:hover {
+  text-decoration:none;
+}
 
 .circle {
     font-weight:bold;
@@ -72,6 +74,11 @@ h3 {
   color:purple;
 }
 
+.name {
+  font-family: 'Playfair Display', serif;
+  font-size: 72px;
+  color: purple;
+}
 
 h1 {
   font-family: 'Playfair Display', serif;

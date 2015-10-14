@@ -1,78 +1,91 @@
 <!DOCTYPE html>
 <html>
-	<head>
-  		<title>Quotable</title>
-  		<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  		<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  		<%= csrf_meta_tags %>
-	</head>
+<head>
+  <title>Quotable</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
 
 <body>
-	<header>
-		<div class="col-xs-3">
-			<div class="circle">
-				<br/>
-				<br/>
-				Q  
-				<br/>
-			</div>	
-		</div>	
-		
-		<div class="col-xs-4 slogan">	
-			<h3> Quotable </h3>
-			Famous Women. Real Quotes.
-		</div>
-		
-		<div class="col-xs-5 links">
-			<!-- Button trigger modal -->
-  			<%= link_to 'CONTRIBUTE', '#', :data => {:toggle => 'modal', :target => '#myModal'} %>
-			 <%= link_to 'ABOUT', about_path %>
-		</div>	
-	</header>	
+  <header>
+    <div class="col-xs-3">
+      <%= link_to root_path, :class => 'logo' do %>
+        <div class="circle">
+          <br/>
+          <br/>
+            Q  
+          <br/>
+        </div>
+      <% end %>
+    </div>
+
+     <div class="name"> Quotable </div>
+    <div class="col-xs-4 hidden-xs slogan">
+     Famous Women. Real Quotes    
+    </div>
+    
+    <div class="col-xs-5 links">
+      <!-- Link trigger modal -->
+      <%= link_to 'CONTRIBUTE', '#', :data => {:toggle => 'modal', :target => '#myModal'} %>
+      &nbsp;&nbsp;
+      <%= link_to 'ABOUT', about_path %>
+    </div>
+  </header>
 
   <!-- Modal -->
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
           <h4 class="modal-title" id="myModalLabel">Contribute Your Quote</h4>
         </div>
-        		<%= simple_form_for @Quote.new do |f| %>
-        		<div class="modal-body">
-            		<%= f.input :saying %>	
-            		<%= f.input :author %>
-            	</div>
-            		<div class="modal-footer">
-            			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>		
-            			<%= f.submit 'Add Quote', :class => 'btn btn-danger' %>
-     				</div>	
-            		<% end %>	
-        	</div>   	
+
+    <%= simple_form_for Quote.new do |f| %>
+       <div class="modal-body">
+         <%= f.input :saying %>  
+           <%= f.input :author %>
         </div>
+          </div> 
+
+          <div class="footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <%= f.submit 'Create', :class => 'btn btn-danger' %>
+          </div>
+        <% end %>
       </div>
-      
-    
+    </div>
+  </div>
 
-<hr />
-<br class="clear" />
+  <hr />
+  
+  <br class="clear" />
+  
+  <div class="container">
+    <% if flash[:error].present? %>
+      <div class="col-xs-10 col-xs-offset-1 alert alert-danger">
+        <%= flash[:error].html_safe %>
+      </div>
+    <% end %>
+    <%= yield %>
+  </div>
 
-	<div class="container">
-		<%= yield %>
-	</div>
+  <div class="footer">
+    <div class="container">
+      <div class="col-xs-6">
+        <%= link_to "Need more wisdom and insight?", root_path, :class => 'next-quote' %>
+      </div>
 
-	<div class="footer">
-		<div class="container">
-			<div class="col-xs-6">
-				<%= link_to "Need more wisdom and insight?", "#", :class => 'next-quote' %> 
-			</div>	
-
-			<div class="col-xs-6 footer-blurb">		
-				Lovingly hand-coded in Dallas, Texas by <a href="http://www.jennifermangaly.com">Jen</a>, 	
-				<br/> @ 2015 Jennifer Mangaly
-			</div>
-		</div>
-	</div>
+      <div class="col-xs-6 footer-blurb">
+        Lovingly hand-coded in Dallas, Texas by <a href="http://www.jennifermangaly.com">Jen</a>,   
+        <br/> @ 2015 Jennifer Mangaly
+      </div>
+    </div>
+  </div>
 </div>
+
 </body>
 </html>
+
