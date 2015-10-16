@@ -44,7 +44,7 @@ body {
 }
 
 .links {
-	// padding-top: 150px; 
+	padding-top: 20px; 
 	font-family: 'Muli', Verdana, Helvetica, sans-serif;
 	font-size: 14px;
 	color:black;
@@ -105,3 +105,8 @@ h2 {
       
 }
 
+@media (max-width: 750px) {
+  .footer-blurb {
+    text-align: left;
+  }
+}
