@@ -32,6 +32,9 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+#Install Factory Girl
+gem "factory_girl_rails", "~> 4.0"
+
 # Include bootstrap
 gem 'bootstrap-sass', '~> 3.3.5'
 gem  'simple_form'
